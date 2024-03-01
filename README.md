@@ -41,14 +41,13 @@ Configuration is done with [TOML](https://toml.io/en/v1.0.0). See
 
 These are the options that govern the general behavior of the software.
 
-| Option                  | Type    | Default    | Description                                                                                                                                                                                                     |
-| ----------------------- | ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| host                    | string  | _required_ | Hostname (plus protocol and port) that the app is running under; e.g. `http://localhost:8000` or `https://foxscotch.net`. Don't include a final slash.                                                          |
-| environment             | string  | _required_ | Development environment the app is running in. The only difference this makes is in which configuration file is loaded. It can be any string, and will load the configuration file named `[value].config.toml`. |
-| secret                  | string  | null       | Secret used as a flimsy form of auth. Hope you're running this behind TLS. It can be pretty much any string, but I'd suggest using a randomly generated password of some kind.                                  |
-| require_secret          | boolean | false      | Whether to require the aforementioned secret to run commands. If you set this, `secret` must obviously be defined.                                                                                              |
-| store_secret_in_cookies | boolean | true       | Whether to store the secret as a cookie for convenience.                                                                                                                                                        |
-| allow_user_options      | boolean | false      | Whether to allow a user to add new options to be passed. If this is set to false, no command will allow user defined options, period. The matching setting on a specific command is ignored in that case.       |
+| Option                  | Type    | Default    | Description                                                                                                                                                                                               |
+| ----------------------- | ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| host                    | string  | _required_ | Hostname (plus protocol and port) that the app is running under; e.g. `http://localhost:8000` or `https://foxscotch.net`. Don't include a final slash.                                                    |
+| secret                  | string  | null       | Secret used as a flimsy form of auth. Hope you're running this behind TLS. It can be pretty much any string, but I'd suggest using a randomly generated password of some kind.                            |
+| require_secret          | boolean | false      | Whether to require the aforementioned secret to run commands. If you set this, `secret` must obviously be defined.                                                                                        |
+| store_secret_in_cookies | boolean | true       | Whether to store the secret as a cookie for convenience.                                                                                                                                                  |
+| allow_user_options      | boolean | false      | Whether to allow a user to add new options to be passed. If this is set to false, no command will allow user defined options, period. The matching setting on a specific command is ignored in that case. |
 
 ### Commands
 
