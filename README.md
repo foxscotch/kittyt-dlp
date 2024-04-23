@@ -20,8 +20,8 @@ Intended for [yt-dlp], as you can probably tell from the name.
 You can start the server with `deno task start`. If you need to use a different
 port than 8000, set the `PORT` environment variable to whatever port you want.
 
-A [development.config.toml](./development.config.toml) file is included with a
-basic configuration. It contains the same configuration as in the
+A [config.toml](./config.toml) file is included with a basic configuration. It
+contains the same configuration as in the
 [Example configuration file](#example-configuration-file) section below. At
 least, it should. If I let it get out of date, that's my bad. Feel free to let
 me know.
