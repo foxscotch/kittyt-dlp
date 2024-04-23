@@ -1,7 +1,7 @@
 host = "http://localhost:8000"
 secret = "abc123"
-require_secret = true
-store_secret_in_cookies = true
+requireSecret = true
+storeSecretInCookies = true
 
 [[commands]]
 
