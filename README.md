@@ -45,7 +45,6 @@ These are the options that govern the general behavior of the software.
 | -------------------- | ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | host                 | string  | _required_ | Hostname (plus protocol and port) that the app is running under; e.g. `http://localhost:8000` or `https://foxscotch.net`. Don't include a final slash.                                                       |
 | secret               | string  | null       | Secret used as a flimsy form of auth. Hope you're running this behind TLS. It can be pretty much any string, but I'd suggest using a randomly generated string. I've provided [a script] for generating one. |
-| requireSecret        | boolean | false      | Whether to require the aforementioned secret to run commands. If you set this, `secret` must obviously be defined.                                                                                           |
 | storeSecretInCookies | boolean | true       | Whether to store the secret as a cookie for convenience.                                                                                                                                                     |
 | allowUserOptions     | boolean | false      | Whether to allow a user to add new options to be passed. If this is set to false, no command will allow user defined options, period. The matching setting on a specific command is ignored in that case.    |
 
@@ -87,7 +86,6 @@ multiple times, etc.
 ```toml
 host = "http://localhost:8000"
 secret = "abc123"
-requireSecret = true
 storeSecretInCookies = true
 
 [[commands]]
